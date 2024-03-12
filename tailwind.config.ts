@@ -21,12 +21,10 @@ const config: Config = {
       oswald: 'var(--font-oswald)',
       roboto: 'var(--font-roboto)',
     },
+    backgroundImage:{
+      hero: 'url(/assets/img/Hero/herobg.jpg)'
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
         accent: '#d4000d'
       },

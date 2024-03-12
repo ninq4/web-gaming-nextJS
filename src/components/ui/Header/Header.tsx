@@ -15,10 +15,10 @@ const Header = () => {
           <Link href={'/'} className="w-[300px] h-[50px] ">
             <Image
               width={200}
-              height={50}
+              height={30}
               src="/assets/img/logo.svg"
               alt="Логотып"
-              className="w-full h-full object-cover"
+              className="object-cover"
             />
           </Link>
           <NavbarMobile

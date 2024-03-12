@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${oswald.variable} w-full bg-zinc-950`}>
+      <body className={`${roboto.variable} ${oswald.variable} w-full bg-zinc-950 text-white`}>
         <div className="__next">
           <Header/>
           <main className="main w-full" id="main">
