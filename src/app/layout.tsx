@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Roboto, Oswald } from 'next/font/google';
 import './globals.css';
-import Header from './components/ui/Header/Header';
-import Footer from './components/ui/Footer/Footer';
+import Header from '@/components/ui/Header/Header';
+import Footer from '@/components/ui/Footer/Footer';
+
 
 const roboto = Roboto({ subsets: ['cyrillic'], weight: ['400'], variable: '--font-roboto' });
 const oswald = Oswald({ subsets: ['cyrillic'], weight: ['400'], variable: '--font-oswald' });
