@@ -26,13 +26,17 @@ const Header = () => {
               openNav
                 ? 'max-h-max border-b border-zinc-800 p-[15px]'
                 : 'max-h-0 overflow-hidden py-0 px-[15px] border-zinc-800/0'
-            } fixed w-full top-[71px] left-0 right-0 transition-all duration-300 bg-zinc-900 md:hidden`}
+            } fixed z-50 w-full top-[71px] left-0 right-0 transition-all duration-300 bg-zinc-900 md:hidden`}
           />
           <Navbar containerStyle="hidden md:flex" />
           <div className="">
-            <ul className="flex items-center gap-4">
+            <ul className="hidden md:flex items-center gap-4 ">
               <li className="inline-flex">
-                <Link className='uppercase text-white/50 hover:text-white transition-colors duration-300' href="">Войти</Link>
+                <Link
+                  className="uppercase text-white/50 hover:text-white transition-colors duration-300"
+                  href="">
+                  Войти
+                </Link>
               </li>
             </ul>
             <button

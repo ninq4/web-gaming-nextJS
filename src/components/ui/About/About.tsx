@@ -1,5 +1,6 @@
 'use client'
 import useBenefits from "@/Hooks/useBenefits";
+import SkeletonCard from "../SkeletonCard/SkeletonCard";
 
 
 const About = () => {
@@ -22,9 +23,9 @@ const About = () => {
                 )
               })
               :
-              [1,2,3,4].map((item, index) => {
+              [1,2,3,4].map((item) => {
                 return (
-                  <div key={index} className="w-[240px] h-[240px] rounded-xl bg-zinc-800 animate-pulse"></div>
+                  <SkeletonCard key={item}/>
                 );
               })}
             </div>
