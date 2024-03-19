@@ -3,9 +3,9 @@ import HeroSlider from '../HeroSlider/HeroSlider';
 
 const Hero = () => {
   return (
-    <section id="Hero" className="w-full bg-hero bg-center bg-no-repeat">
+    <section className="w-full bg-hero bg-cover bg-center bg-no-repeat" id="hero">
       <div className="container mx-auto">
-        <div className="w-full py-16">
+        <div className="w-full py-24">
           <HeroSlider />
         </div>
       </div>

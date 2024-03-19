@@ -10,51 +10,55 @@ import 'swiper/css/navigation';
 import CustomButton from '../CustomButton/CustomButton';
 
 const HeroSlider = () => {
-  const slideData = [
+  const SlideData = [
     {
       title: 'Lorem ipsum dolor sit amet.',
-      desription:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae reprehenderit at eligendi fugiat nulla optio nemo eum excepturi tenetur, neque ipsa distinctio nesciunt blanditiis quia dolore ut iusto cumque consequatur',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quisquam repellat incidunt? Facere ad, animi quas recusandae fuga commodi iusto officiis consequatur, sed quisquam atque?',
     },
     {
       title: 'Lorem ipsum dolor sit amet.',
-      desription:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae reprehenderit at eligendi fugiat nulla optio nemo eum excepturi tenetur, neque ipsa distinctio nesciunt blanditiis quia dolore ut iusto cumque consequatur',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. sit amet, consectetur adipisicing elit. Provident quisquam repellat incidunt? Facere ad, animi quas recusandae fuga commodi iusto officiis consequatur, sed quisquam atque?',
     },
     {
       title: 'Lorem ipsum dolor sit amet.',
-      desription:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae reprehenderit at eligendi fugiat nulla optio nemo eum excepturi tenetur, neque ipsa distinctio nesciunt blanditiis quia dolore ut iusto cumque consequatur',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quisquam repellat incidunt? Facere ad, animi quas recusandae fuga commodi iusto officiis consequatur, sed quisquam atque?',
     },
   ];
+
   return (
     <Swiper className="w-full h-full">
-      {slideData.map((item, index) => {
+      {SlideData.map((item, index) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="">
             <div className="w-full md:w-1/2">
               <motion.h2
                 variants={fadeIn('up', 0.1)}
                 initial="hidden"
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.2 }}
-                className=" mb-8 mb:text-8xl">
-                {' '}
+                viewport={{ once: false, amount: 0.1 }}
+                className="mb-8 md:text-8xl">
                 {item.title}
               </motion.h2>
               <motion.p
                 variants={fadeIn('up', 0.1)}
                 initial="hidden"
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 className="text-base md:text-xl mb-12">{`${
-                item.desription.length > 189
-                  ? item.desription.slice(0, 189) + '...'
-                  : item.desription
+                item.description.length > 189
+                  ? item.description.slice(0, 189) + '...'
+                  : item.description
               }`}</motion.p>
-            </div>
-            <div className="">
-              <CustomButton containerStyle="w-[200px] h-[60px]" text="Подробнее" />
+              <motion.div
+                variants={fadeIn('up', 0.1)}
+                initial="hidden"
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.1 }}>
+                <CustomButton containerStyle={'w-[170px] h-[50px]'} text="Подробнее" />
+              </motion.div>
             </div>
           </SwiperSlide>
         );
