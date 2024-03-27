@@ -1,11 +1,10 @@
-'use client'
+'use client';
 import useBenefits from '@/Hooks/useBenefits';
 import React from 'react';
 import SkeletonCard from '../SkeletonCard/SkeletonCard';
 
 const AboutCards = () => {
-
-    const benefitsList = useBenefits()
+  const benefitsList = useBenefits();
   return (
     <>
       {benefitsList.length > 0

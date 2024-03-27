@@ -10,7 +10,7 @@ const useBenefits = () => {
     },[]);
   
     const getBenef = () => {
-      GlobalApi.getBenefists().then((resp:any) => {
+      GlobalApi.getBenefists().then((resp) => {
         console.log(resp.data.data);
         setBenefitsList(resp.data.data);
       });
