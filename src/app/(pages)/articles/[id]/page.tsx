@@ -1,11 +1,8 @@
-'use client';
-import React, { useEffect } from 'react'
 
-export default function page({params}) {
-    useEffect(()=>{
-        console.log(params.id)
-    }, [])
-  return (
-    <div>{params.id}</div>
-  )
+import SingleArticle from '@/components/ui/SingleArticle/SingleArticle';
+
+
+
+export default function page({ params }: { params: number }) {
+  return <SingleArticle params={params} />
 }

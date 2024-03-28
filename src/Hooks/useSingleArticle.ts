@@ -1,11 +1,10 @@
-'use client'
 import GlobalAPI from '@/utils/GlobalAPI'
 import React, { useEffect, useState } from 'react'
 
-const useArticles = () => {
+const useSingleArticle = ({id} : {id: number}) => {
     const [articlesList, setArticlesList] = useState([])
     const getArticles = () => {
-        GlobalAPI.getArticles().then((resp:any)=>{
+        GlobalAPI.getSingleArticle(id).then((resp: any)=>{
             console.log(resp.data.data)
             setArticlesList(resp.data.data)
         })
@@ -16,4 +15,4 @@ const useArticles = () => {
     return articlesList
 }
 
-export default useArticles
+export default useSingleArticle
