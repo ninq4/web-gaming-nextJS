@@ -43,7 +43,7 @@ const HeroSlider = () => {
                 initial="hidden"
                 whileInView={'show'}
                 viewport={{ once: false, amount: 0.1 }}>
-                <CustomButton containerStyle={'w-[170px] h-[50px]'} text="Подробнее" />
+                <CustomButton containerStyle={'w-[170px] h-[50px]'} text="Подробнее" href='/' />
               </motion.div>
             </div>
           </SwiperSlide>

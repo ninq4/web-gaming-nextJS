@@ -1,3 +1,6 @@
+// 'use client'
+import { LoginLink, LogoutLink, RegisterLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -20,6 +23,7 @@ const menuLinks = [
   },
 ];
 const NavbarMobile = ({ containerStyle }: { containerStyle: string }) => {
+  const { user } = useKindeBrowserClient()
   return (
     <nav className={`${containerStyle}`}>
       <menu className="w-full flex flex-col gap-4">
@@ -35,13 +39,22 @@ const NavbarMobile = ({ containerStyle }: { containerStyle: string }) => {
           );
         })}
         <ul className="flex items-center gap-4">
-          <li className="inline-flex">
-            <Link
-              className="uppercase text-white/50 hover:text-white transition-colors duration-300"
-              href="">
-              Войти
-            </Link>
-          </li>
+          {user ?
+
+            <div className='flex items-center gap-4'>
+              <LogoutLink className='uppercase text-white/50 hover:text-white transition-all'>Выйти</LogoutLink>
+            </div>
+
+            :
+            <>
+              <li className="inline-flex">
+                <RegisterLink className='uppercase text-white/50 hover:text-white transition-all'>Регистрация</RegisterLink>
+              </li>
+              <li className="inline-flex">
+                <LoginLink className='uppercase text-white/50 hover:text-white transition-all'>Войти</LoginLink>
+              </li>
+            </>
+          }
         </ul>
       </menu>
     </nav>
